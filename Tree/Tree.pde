@@ -45,12 +45,12 @@ void draw()
   
   stroke(255,20,140);//tree
   strokeWeight(3);
-  frameRate(60);
+  frameRate(60);//20000
   for(int i = 0; i < fft.specSize(); i++)
   {
         
         // Let's pick an angle 0 to 90 degrees based on the mouse position
-        float a = fft.getBand(i) * 90f*2;
+        float a = fft.getBand(i) * 90f;
         theta = radians(a);
         println(theta);
   }
@@ -68,7 +68,7 @@ void draw()
   for(int i = 0; i < song.left.size() - 1; i++)
   {
     line(i, 50 + song.left.get(i)*50, i+1, 50 + song.left.get(i+1)*50);
-    line(i, 150 + song.right.get(i)*50, i+1, 150 + song.right.get(i+1)*50);
+    //line(i, 150 + song.right.get(i)*50, i+1, 150 + song.right.get(i+1)*50);
   }
 
 }
